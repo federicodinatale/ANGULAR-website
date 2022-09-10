@@ -15,6 +15,11 @@ import {MatCardModule} from '@angular/material/card';
 
 // button material
 import {MatButtonModule} from '@angular/material/button';
+import { BottoneComponent } from './bottone/bottone.component';
+import { EventoComponent } from './evento/evento.component';
+
+//input material
+import {MatInputModule} from '@angular/material/input';
 
 
 
@@ -23,6 +28,8 @@ import {MatButtonModule} from '@angular/material/button';
     AppComponent,
     ProvaComponent,
     NavbarComponent,
+    BottoneComponent,
+    EventoComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +37,8 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserAnimationsModule,
     MatSliderModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
