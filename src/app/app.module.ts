@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,9 @@ import { EventoComponent } from './evento/evento.component';
 
 //input material
 import {MatInputModule} from '@angular/material/input';
+import { TitleComponent } from './title/title.component';
+import { DirettiveComponent } from './direttive/direttive.component';
+import { ParentChildComponent } from './parent-child/parent-child.component';
 
 
 
@@ -30,8 +34,12 @@ import {MatInputModule} from '@angular/material/input';
     NavbarComponent,
     BottoneComponent,
     EventoComponent,
+    TitleComponent,
+    DirettiveComponent,
+    ParentChildComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

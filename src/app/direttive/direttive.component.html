@@ -1,0 +1,81 @@
+<h1>{{title}}</h1>
+
+<p *ngIf="4<5"> Mostra il contenuto solo se questa direttiva è vera</p>
+<p *ngIf="10<5"> Mostra il contenuto solo se questa direttiva è vera</p>
+
+
+<!-- MOSTARE SE LA PERSONA È ONLINE -->
+<span>
+  <p *ngIf="isOnline">È online</p>
+  <p *ngIf="!isOnline"> Non è online</p>
+</span>
+
+
+<!-- if /else usando ngif -->
+
+<!--
+  else è semplicemente un altro elemento che si deve per forza chiamare ng-template
+ -->
+<p *ngIf="isOnline; then bloccoif else bloccoelse"></p>
+
+<ng-template #bloccoif>
+  <p>Sono Offline</p>
+</ng-template>
+<ng-template #bloccoelse>
+  <p>Sono Offline</p>
+</ng-template>
+
+
+<h3>FOR USANDO DIRETTIVE</h3>
+<!-- alcune variabili che posso usare let persona of persone; index as i; count as c; even as isEven; odd as isOdd -->
+<ul>
+  <li *ngFor="let persona of persone; index as i"> {{i}} - {{persona.nome}}
+    <span *ngIf="persona.isOnline; then bloccoif else bloccoelse"></span>
+
+    <ng-template #bloccoif>
+      <span class="cerchioOnline"></span>
+    </ng-template>
+
+    <ng-template #bloccoelse>
+      <span class="cerchioOffline"></span>
+    </ng-template>
+  </li>
+</ul>
+
+
+<h3>SWITCH USANDO DIRETTIVE</h3>
+
+<h4>con un int</h4>
+<div [ngSwitch]="valoreSwitch">
+  <p *ngSwitchCase="1">uno</p>
+  <p *ngSwitchCase="2">due</p>
+  <p *ngSwitchCase="3">tre</p>
+  <p *ngSwitchCase="4">quattro</p>
+  <p *ngSwitchDefault>cinque</p>
+</div>
+
+<h4>con una stringa</h4>
+<div [ngSwitch]="valoreSwitchString">
+  <p *ngSwitchCase="'Mario'">Mario</p>
+  <p *ngSwitchCase="'Pluto'">Pluto</p>
+  <p *ngSwitchCase="'Pippo'">Pippo</p>
+  <p *ngSwitchDefault>Default</p>
+</div>
+
+
+
+<h3>NGSTYLE USANDO DIRETTIVE</h3>
+
+<div *ngFor="let e of citiesEurope">
+  <p [ngStyle]="{color: e.seaView ? 'blue' : 'brown'}">{{e.city}}</p>
+</div>
+
+
+
+<h2>NGCLASS USANDO DIRETTIVE</h2>
+<div *ngFor="let e of citiesEurope">
+  <p [ngClass]="{'underline textPositive': e.seaView}">{{e.city}}</p>
+  <p [ngClass]="e.seaView ? 'seaClass' : 'noSeaClass' ">{{e.city}}</p>
+
+</div>
+

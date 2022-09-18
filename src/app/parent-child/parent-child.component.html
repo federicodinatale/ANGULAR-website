@@ -1,0 +1,6 @@
+<div *ngFor="let persona of data">
+  <p ngClass="text-white">{{persona.nome}} {{persona.cognome}}</p>
+</div>
+
+<button (click)="mandaDati()">Manda dati al parent</button>
+

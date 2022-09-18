@@ -16,8 +16,11 @@ export class EventoComponent {
     console.log(e);
   }
 
+
+
 // evento.component.ts
   onInput(e: Event) {
+
     console.log((<HTMLInputElement>e.target).value);
 
   }
