@@ -7,6 +7,13 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 })
 export class AppComponent implements OnInit, AfterViewInit{
 
+
+  colore = "";
+
+  coloreEvidenzia(colore: string) {
+    this.colore = colore
+  }
+
   @ViewChild('inputSaluti') valoreInput! : ElementRef<HTMLInputElement>
 
   ngOnInit(): void {

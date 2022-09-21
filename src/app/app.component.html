@@ -25,3 +25,13 @@
 <!-- se invece voglio ottenere il valore con un click -->
 <input #inputSaluti value="ciao">
 <button (click)="onClick()">Stampa Contenuto</button>
+
+
+<p [appHighlight] ="colore"> TITOLO</p>
+
+<div>
+  <input type="radio" name="coloreEvidenziatore" (click)="coloreEvidenzia('red')"> Rosso
+  <input type="radio" name="coloreEvidenziatore" (click)="coloreEvidenzia('blue')"> Blue
+  <input type="radio" name="coloreEvidenziatore"(click)="coloreEvidenzia('pink')"> Rosa
+
+</div>

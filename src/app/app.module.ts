@@ -24,6 +24,7 @@ import {MatInputModule} from '@angular/material/input';
 import { TitleComponent } from './title/title.component';
 import { DirettiveComponent } from './direttive/direttive.component';
 import { ParentChildComponent } from './parent-child/parent-child.component';
+import { HighlightDirective } from './highlight.directive';
 
 
 
@@ -37,6 +38,7 @@ import { ParentChildComponent } from './parent-child/parent-child.component';
     TitleComponent,
     DirettiveComponent,
     ParentChildComponent,
+    HighlightDirective,
   ],
   imports: [
     FormsModule,
